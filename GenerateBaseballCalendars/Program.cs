@@ -16,12 +16,10 @@ namespace GenerateBaseballCalendars
         {
             var serializer = new CalendarSerializer();
             var serializedCalendar = serializer.SerializeToString(calendar).Replace("PRODID:-//github.com/rianjs/ical.net//NONSGML ical.net 4.0//EN", "PRODID:-//  //NONSGML //EN");
-            string docPath = "D:\\dev-TryOuts\\GenerateBaseballCalendars\\Export";
+            string docPath = Path.GetFullPath(@"..\..\..\..\Export", AppDomain.CurrentDomain.BaseDirectory);
             File.WriteAllText(Path.Combine(docPath, filename +  ".ics"), serializedCalendar);
         }
     }
-
-
 
     internal class Program
     {
