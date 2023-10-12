@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateBaseballCalendars", "HTMLTableWebScraper\GenerateBaseballCalendars.csproj", "{11E83B1C-F22B-4532-84B5-538E865A2652}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateBaseballCalendars", "GenerateBaseballCalendars\GenerateBaseballCalendars.csproj", "{11E83B1C-F22B-4532-84B5-538E865A2652}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
