@@ -19,6 +19,7 @@ namespace GenerateBaseballCalendars
             string away = game.awaylabel.ToString();
             string field = game.stadium.ToString();
             string knbsbNr = game.gamecode.ToString();
+            string WBSCNr = game.id.ToString();
             string compRound = game.gametypelabel.ToString();
             string compRef;
             switch (compRound)

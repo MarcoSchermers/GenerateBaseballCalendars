@@ -63,5 +63,50 @@ namespace GenerateBaseballCalendars
 
             return ev;
         }
+
+        public static CalendarEvent CreateCalendarEvent(string id,
+                                                        string titel,
+                                                        string stadium,
+                                                        DateTime Datum,
+                                                        TimeSpan? tijd,
+                                                        string timeZone,
+                                                        string uidPrefix,
+                                                        int fileSeqeunce,
+                                                        double Duur = 3,
+                                                        string description = "",
+                                                        string EventSuffix = "")
+        {
+            bool isAllDay;
+            DateTime BeginTijd;
+            int uur = (int)Math.Truncate(Duur);
+            int minute = (int)((Duur - uur) * 60);
+
+            if (tijd == null)
+            {
+                isAllDay = true;
+                BeginTijd = Datum;
+            }
+            else
+            {
+                isAllDay = false;
+                BeginTijd = Datum + tijd.Value;
+            }
+
+            var StartTime = new CalDateTime(BeginTijd, timeZone);
+
+            var ev = new CalendarEvent
+            {
+                Uid = uidPrefix + id + "-" + EventSuffix,
+                Sequence = fileSeqeunce,
+                Start = StartTime,
+                End = StartTime.AddHours(uur).AddMinutes(minute),
+                Summary = titel,
+                Location = stadium,
+                Description = description,
+                IsAllDay = isAllDay
+            };
+
+            return ev;
+        }
     }
 }

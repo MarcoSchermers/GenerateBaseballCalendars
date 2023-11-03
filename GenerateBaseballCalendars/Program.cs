@@ -5,6 +5,7 @@ using System.Net;
 using Ical.Net.Serialization;
 using System.IO;
 using Newtonsoft.Json;
+using GenerateBaseballCalendars.Competitions;
 
 namespace GenerateBaseballCalendars
 {
@@ -28,7 +29,8 @@ namespace GenerateBaseballCalendars
         {
             wbscCompetition();
             knbsbCompetition();
-            mlbCompetition();
+            //mlbCompetition();
+            schaatsKalender();
             //mlbTransactions();
         }
 
@@ -164,29 +166,33 @@ namespace GenerateBaseballCalendars
             {
 
                 #region Played Competitions
+                /*
 
-                //// HHW 2022
-                //WbscCompetition.WriteICalCalender("https://stats.knbsbstats.nl/en/events/2022-honkbalweek-haarlem/schedule-and-results",
-                //                                  "NL-HH-Reg-2022-",
-                //                                  "Europe/Amsterdam",
-                //                                  "HHW-2022"
-                //                                 );
+                // HHW 2022
+                WbscCompetition.WriteICalCalender("https://stats.knbsbstats.nl/en/events/2022-honkbalweek-haarlem/schedule-and-results",
+                                                  "NL-HH-Reg-2022-",
+                                                  "Europe/Amsterdam",
+                                                  "HHW-2022"
+                                                 );
 
-                //// WK U18 2023
-                //WbscCompetition.WriteICalCalender("https://www.wbsc.org/en/events/2023-u18-baseball-world-cup/schedule-and-results",
-                //                                  "WBSC-WCU18-2023-",
-                //                                  "Asia/Taipei",
-                //                                  "WC-U18-2023"
-                //                                 );
+                // WK U18 2023
+                WbscCompetition.WriteICalCalender("https://www.wbsc.org/en/events/2023-u18-baseball-world-cup/schedule-and-results",
+                                                  "WBSC-WCU18-2023-",
+                                                  "Asia/Taipei",
+                                                  "WC-U18-2023"
+                                                 );
 
+
+                //// EK 2023 
+                WbscCompetition.WriteICalCalender("https://www.wbsceurope.org/en/events/2023-european-baseball-championship/schedule-and-results",
+                                                  "WBSC-EU-EC-2023-",
+                                                  "Europe/Prague",
+                                                  "EC-2023"
+                                                 );
+
+                 */
                 #endregion
 
-                ////// EK 2023 
-                //WbscCompetition.WriteICalCalender("https://www.wbsceurope.org/en/events/2023-european-baseball-championship/schedule-and-results",
-                //                                  "WBSC-EU-EC-2023-",
-                //                                  "Europe/Prague",
-                //                                  "EC-2023"
-                //                                 );
             }
             catch (Exception ex)
             {
@@ -201,38 +207,42 @@ namespace GenerateBaseballCalendars
             try
             {
                 #region Played Competitions
+                /*
+                // Hoofdklasse seizoen 2023 knbsb site
+                
+                knbsbCompetition.WriteICalCalender("https://www.knbsb.nl/sportlink_api/competitions/Honkbal/6399/programma/",
+                                                   "NL-HH-WCTop-2023-",
+                                                   "Europe/Amsterdam",
+                                                   "KNBSB-WCTop-2023"
+                                                  );
+                knbsbCompetition.WriteICalCalender("https://www.knbsb.nl/sportlink_api/competitions/Honkbal/6400/programma/",
+                                                   "NL-HH-WCBottom-2023-",
+                                                   "Europe/Amsterdam",
+                                                   "KNBSB-WCBottom-2023"
+                                                  );
+                knbsbCompetition.WriteICalCalender("https://www.knbsb.nl/sportlink_api/competitions/Honkbal/6401/programma/",
+                                                   "NL-HH-PO-2023-",
+                                                   "Europe/Amsterdam",
+                                                   "KNBSB-PO-2023"
+                                                  );
 
-                //// Hoofdklasse seizoen 2023 knbsb site
-                //knbsbCompetition.WriteICalCalender("https://www.knbsb.nl/sportlink_api/competitions/Honkbal/6399/programma/",
-                //                                   "NL-HH-WCTop-2023-",
-                //                                   "Europe/Amsterdam",
-                //                                   "KNBSB-WCTop-2023"
-                //                                  );
-                //knbsbCompetition.WriteICalCalender("https://www.knbsb.nl/sportlink_api/competitions/Honkbal/6400/programma/",
-                //                                   "NL-HH-WCBottom-2023-",
-                //                                   "Europe/Amsterdam",
-                //                                   "KNBSB-WCBottom-2023"
-                //                                  );
-                //knbsbCompetition.WriteICalCalender("https://www.knbsb.nl/sportlink_api/competitions/Honkbal/6401/programma/",
-                //                                   "NL-HH-PO-2023-",
-                //                                   "Europe/Amsterdam",
-                //                                   "KNBSB-PO-2023"
-                //                                  );
+                KnbsbCompetition.WriteICalCalender("https://www.knbsb.nl/sportlink_api/competitions/Honkbal/6402/programma/",
+                                                   "NL-HH-HS-2023-",
+                                                   "Europe/Amsterdam",
+                                                   "KNBSB-HS-2023"
+                                                  );
 
-                //KnbsbCompetition.WriteICalCalender("https://www.knbsb.nl/sportlink_api/competitions/Honkbal/6402/programma/",
-                //                                   "NL-HH-HS-2023-",
-                //                                   "Europe/Amsterdam",
-                //                                   "KNBSB-HS-2023"
-                //                                  );
-
-                #endregion
-
-                //// Hoofdklasse seizoen 2023 knbsb stats site
+                // Hoofdklasse seizoen 2023 knbsb stats site
                 knbsbInWbscCompetition.WriteICalCalender("https://stats.knbsbstats.nl/en/events/2023-hoofdklasse-honkbal/schedule-and-results",
                                                          "NL-HH-{RoundRef}-2023-",
                                                          "Europe/Amsterdam",
                                                          "KNBSB-2023"
                                                         );
+
+                */
+                #endregion
+
+
 
             }
             catch (Exception ex)
@@ -242,5 +252,18 @@ namespace GenerateBaseballCalendars
 
         }
 
+
+        static void schaatsKalender()
+        {
+            try
+            {
+                SchaatsenKalender.WriteICalCalender("SKATE-2023-", "Skate-2023");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
