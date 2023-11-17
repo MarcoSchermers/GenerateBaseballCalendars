@@ -29,7 +29,7 @@ namespace GenerateBaseballCalendars
         {
             wbscCompetition();
             knbsbCompetition();
-            //mlbCompetition();
+            mlbCompetition();
             schaatsKalender();
             //mlbTransactions();
         }
@@ -136,6 +136,13 @@ namespace GenerateBaseballCalendars
                 //                                  "ALB-Regular-2022-2023"
                 //                                 );
 
+                // MLB Playoff 
+                //MlbCompetition.WriteICalCalender("https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-10-02&endDate=2023-11-10&hydrate=team(venue(timezone)),venue(timezone),gameInfo,seriesStatus,seriesSummary,gameData",
+                //                                  "MLB-2023-",
+                //                                  "Etc/UTC",
+                //                                  "MLB-Playoff-2023"
+                //                                 );
+
                 #endregion
 
 
@@ -147,12 +154,7 @@ namespace GenerateBaseballCalendars
                                                  );
 
 
-                // MLB Playoff 
-                MlbCompetition.WriteICalCalender("https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2023-10-02&endDate=2023-11-10&hydrate=team(venue(timezone)),venue(timezone),gameInfo,seriesStatus,seriesSummary,gameData",
-                                                  "MLB-2023-",
-                                                  "Etc/UTC",
-                                                  "MLB-Playoff-2023"
-                                                 );
+
             }
             catch (Exception ex)
             {

@@ -92,6 +92,8 @@ namespace GenerateBaseballCalendars
             var calendar = new Calendar();
             calendar.AddTimeZone(timeZone);
 
+            mlbUrl += "&gameType=[E,S,R,A,F,D,L,W]"; // (temporary fix) for corrupt Exhibition game SYD - CAN  11-11-2023 of 17-11-2023
+
             string jsonCode = "";
             using (WebClient client = new WebClient())
             {

@@ -49,6 +49,7 @@ namespace GenerateBaseballCalendars.Competitions
         {
             var calendar = new Calendar();
             calendar.AddTimeZone("Europe/Amsterdam");
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("World Cup Kwalificatietoernooi", "KNSB-WCKT", "Heerenveen, NED",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
@@ -73,6 +74,7 @@ namespace GenerateBaseballCalendars.Competitions
                                                             , uidPrefix));
             var StartTime = new TimeSpan(14, 30, 0);
             var TimeZone = "Asia/Tokyo";
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("ISU World Cup 1 Langebaan", "ISUWC1", "Obihiro, JPN",
                                                             new List<SchaatsEvent>()  {  
                                                                 new SchaatsEvent() {
@@ -97,6 +99,7 @@ namespace GenerateBaseballCalendars.Competitions
                                                             , uidPrefix));
             StartTime = new TimeSpan(17, 00, 0);
             TimeZone = "Asia/Shanghai";
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("ISU World Cup 2 Langebaan", "ISUWC2", "Beijing, CHN",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
@@ -122,6 +125,7 @@ namespace GenerateBaseballCalendars.Competitions
 
             StartTime = new TimeSpan(14, 00, 0);
             TimeZone = "Europe/Oslo";
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("ISU World Cup 3 Langebaan", "ISUWC3", "Stavanger, NOR",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
@@ -147,6 +151,7 @@ namespace GenerateBaseballCalendars.Competitions
 
             StartTime = new TimeSpan(17, 00, 0);
             TimeZone = "Europe/Warsaw";
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("ISU World Cup 4 Langebaan", "ISUWC4", "Thomaszów Mazowiecki, POL",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
@@ -170,6 +175,7 @@ namespace GenerateBaseballCalendars.Competitions
                                                             }
                                                             , uidPrefix));
             TimeZone = "Europe/Amsterdam";
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("Daikin NK Afstanden", "KNSB-NKA", "Heerenveen, NED",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
@@ -194,24 +200,25 @@ namespace GenerateBaseballCalendars.Competitions
                                                             , uidPrefix));
 
             TimeZone = "Europe/Amsterdam";
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("ISU EK Afstanden", "ISUEKA", "Heerenveen, NED",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 01, 5),
                                                                     Start = new TimeSpan(19, 30, 0),
-                                                                    End = new TimeSpan(21, 57, 0),
+                                                                    End = new TimeSpan(22, 15, 0),
                                                                     TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 01, 6),
                                                                     Start = new TimeSpan(14, 30, 0),
-                                                                    End = new TimeSpan(17, 38, 0),
+                                                                    End = new TimeSpan(18, 00, 0),
                                                                     TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 01, 7),
                                                                     Start = new TimeSpan(14, 15, 0),
-                                                                    End = new TimeSpan(17, 39, 0),
+                                                                    End = new TimeSpan(18, 00, 0),
                                                                     TimeZone = TimeZone
                                                                 }
                                                             }
@@ -268,77 +275,81 @@ namespace GenerateBaseballCalendars.Competitions
                                                             , uidPrefix));
 
             TimeZone = "America/Edmonton";
+            StartTime = new TimeSpan(12, 30, 0);
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("ISU WK Afstanden", "ISUWKA", "Calgary, CAN",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 02, 15),
-                                                                    Start = new TimeSpan(20, 30, 0),
-                                                                    End = new TimeSpan(23, 30, 0),
-                                                                    TimeZone = "Europe/Amsterdam"
+                                                                    Start = StartTime,
+                                                                    End = new TimeSpan(16, 15, 0),
+                                                                    TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 02, 16),
-                                                                    Start = new TimeSpan(20, 30, 0),
-                                                                    End = new TimeSpan(23, 30, 0),
-                                                                    TimeZone = "Europe/Amsterdam"
+                                                                    Start = StartTime,
+                                                                    End = new TimeSpan(15, 00, 0),
+                                                                    TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 2, 17),
-                                                                    Start = new TimeSpan(20, 30, 0),
-                                                                    End = new TimeSpan(23, 30, 0),
-                                                                    TimeZone = "Europe/Amsterdam"
+                                                                    Start = StartTime,
+                                                                    End = new TimeSpan(16, 30, 0),
+                                                                    TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 2, 18),
-                                                                    Start = new TimeSpan(20, 30, 0),
-                                                                    End = new TimeSpan(23, 30, 0),
-                                                                    TimeZone = "Europe/Amsterdam"
+                                                                    Start = StartTime.Add(new TimeSpan(0,30,0)),
+                                                                    End = new TimeSpan(17, 00, 0),
+                                                                    TimeZone = TimeZone
                                                                 }
                                                             }
                                                             , uidPrefix));
 
             TimeZone = "Europe/Amsterdam";
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("Daikin NK Allround & Sprint", "KNSB-NKALLSP", "Heerenveen, NED",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 2, 24),
                                                                     Start = new TimeSpan(11, 00, 0),
-                                                                    End = new TimeSpan(17, 40, 0),
+                                                                    End = new TimeSpan(17, 45, 0),
                                                                     TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 2, 25),
-                                                                    Start = new TimeSpan(11, 05, 0),
-                                                                    End = new TimeSpan(17, 37, 0),
+                                                                    Start = new TimeSpan(11, 00, 0),
+                                                                    End = new TimeSpan(17, 15, 0),
                                                                     TimeZone = TimeZone
                                                                 }
                                                             }
                                                             , uidPrefix));
             TimeZone = "Europe/Berlin";
+            //Localized
             calendar.Events.AddRange(GameCalenderEvent("ISU WK Allround en Sprint Langebaan", "ISUWKALLSP", "Inzell, GER",
                                                             new List<SchaatsEvent>()  {
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 3, 7),
-                                                                    Start = new TimeSpan(17, 00, 0),
-                                                                    End = new TimeSpan(19, 30, 0),
+                                                                    Start = new TimeSpan(19, 00, 0),
+                                                                    End = new TimeSpan(22, 15, 0),
                                                                     TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 3, 8),
-                                                                    Start = new TimeSpan(17, 00, 0),
-                                                                    End = new TimeSpan(19, 30, 0),
+                                                                    Start = new TimeSpan(18, 30, 0),
+                                                                    End = new TimeSpan(22, 00, 0),
                                                                     TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 3, 9),
-                                                                    Start = new TimeSpan(13, 00, 0),
+                                                                    Start = new TimeSpan(12, 45, 0),
                                                                     End = new TimeSpan(17, 30, 0),
                                                                     TimeZone = TimeZone
                                                                 },
                                                                 new SchaatsEvent() {
                                                                     Date = new DateTime(2024, 3, 10),
-                                                                    Start = new TimeSpan(13, 00, 0),
-                                                                    End = new TimeSpan(17, 30, 0),
+                                                                    Start = new TimeSpan(13, 15, 0),
+                                                                    End = new TimeSpan(17, 17, 0),
                                                                     TimeZone = TimeZone
                                                                 }
                                                             }
